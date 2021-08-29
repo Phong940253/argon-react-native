@@ -195,15 +195,29 @@ function AccountStack(props) {
                 name="Login"
                 component={Login}
                 options={{
-                    cardStyle: { backgroundColor: "#F8F9FE" },
+                    header: ({ navigation, scene }) => (
+                        <Header
+                            title="Login"
+                            titleStyle={{width: "100%",
+                                fontSize: 20,
+                                textAlign: 'center',
+                                fontWeight: "bold",
+                            }}
+                            leftStyle={{}}
+                            rightStyle={{}}
+                            navbarStyle = {{zIndex:5, }}
+                            iconBack
+                            black
+                            navigation={navigation}
+                            scene={scene}
+                        />
+                    ),
+
                 }}
             />
             <Stack.Screen
                 name="Register"
                 component={Register}
-                options={{
-                    headerTransparent: true,
-                }}
             />
         </Stack.Navigator>
     );

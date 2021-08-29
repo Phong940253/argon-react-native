@@ -158,7 +158,8 @@ class Login extends React.Component {
                                                 style={{
                                                     color: argonTheme.COLORS
                                                         .PRIMARY,
-                                                    fontSize: 14,
+                                                    fontSize: 16,
+
                                                 }}
                                                 onPress={() => {
                                                     this.props.navigation.navigate(

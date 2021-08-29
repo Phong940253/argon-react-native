@@ -240,6 +240,7 @@ class Header extends React.Component {
     render() {
         const {
             back,
+            iconBack,
             title,
             white,
             transparent,
@@ -247,6 +248,7 @@ class Header extends React.Component {
             iconColor,
             titleColor,
             navigation,
+            navbarStyle,
             ...props
         } = this.props;
 
@@ -272,13 +274,13 @@ class Header extends React.Component {
                 <NavBar
                     back={false}
                     title={title}
-                    style={navbarStyles}
+                    style={navbarStyle ?? navbarStyles}
                     transparent={transparent}
                     right={this.renderRight()}
                     rightStyle={{ alignItems: "center" }}
                     left={
                         <Icon
-                            name={back ? "chevron-left" : "menu"}
+                            name={(back ?? iconBack) ? "chevron-left" : "menu"}
                             family="entypo"
                             size={20}
                             onPress={this.handleLeftPress}

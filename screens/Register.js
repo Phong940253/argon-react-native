@@ -4,7 +4,7 @@ import {
     ImageBackground,
     Dimensions,
     StatusBar,
-    KeyboardAvoidingView,
+    KeyboardAvoidingView, ScrollView,
 } from "react-native";
 import { Block, Checkbox, Text, theme } from "galio-framework";
 
@@ -84,7 +84,7 @@ const Register = () => {
                                 </Button>
                             </Block>
                         </Block>
-                        <Block flex>
+                        <ScrollView flex style={styles.registerForm}>
                             <Block flex={0.17} middle>
                                 <Text color="#8898AA" size={12}>
                                     Hoặc đăng kí bằng cách
@@ -301,7 +301,7 @@ const Register = () => {
                                     </Block>
                                 </KeyboardAvoidingView>
                             </Block>
-                        </Block>
+                        </ScrollView>
                     </Block>
                 </Block>
             </ImageBackground>
@@ -347,6 +347,9 @@ const styles = StyleSheet.create({
         color: argonTheme.COLORS.PRIMARY,
         fontWeight: "800",
         fontSize: 14,
+    },
+    registerForm: {
+        paddingTop: 10,
     },
     inputIcons: {
         marginRight: 12,
